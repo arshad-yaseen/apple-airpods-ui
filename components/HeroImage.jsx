@@ -54,13 +54,26 @@ function HeroImage() {
 
  window.onscroll = (e) => {
 
+  let hero = document.getElementById('hero');
+
+ // get the current scroll position
+ const currentScrollPosition = window.scrollY || window.pageYOffset;
+
+ // check if the current scroll position is greater than or equal to the maximum scroll position
+ if (currentScrollPosition >= hero.scrollHeight - window.innerHeight) {
+   // the scroll has ended
+   document.querySelector('.dancing-video').classList.replace('opacity-0', 'opacity-100')
+ }else{
+    document.querySelector('.dancing-video').classList.replace('opacity-100', 'opacity-0')
+ }
+
   let hero_airpords_image = document.getElementById('hero-airpords-image');
 
       const scroll_index = Math.floor(
         mapRange(
           window.scrollY,
           0,
-          document.body.clientHeight - window.innerHeight,
+          document.getElementById('hero').clientHeight - window.innerHeight,
           1,
           32
         )
@@ -176,8 +189,7 @@ function HeroImage() {
         case 32:
           setFrame(Frame32);
           break;
-        default:
-          setFrame(Frame1);
+    
       }
     };
   }, []);

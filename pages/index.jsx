@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
 import Header from "../components/Header";
+import DancingSection from "../components/DancingSection";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -50,6 +51,7 @@ export default function Home() {
 
           <Header />
           <Hero />
+          <DancingSection />
 
       </main>
     </>

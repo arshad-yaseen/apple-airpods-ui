@@ -2,6 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import React, { useEffect } from "react";
 import HeroImage from "../components/HeroImage";
+import DancingVideo from "../public/videos/dancing.mp4";
 
 function Hero() {
   useEffect(() => {
@@ -25,22 +26,21 @@ function Hero() {
         scrub: true,
         start: "bottom bottom",
         onUpdate: (self) => {
-          if(self.progress === 1) {
+          if (self.progress === 1) {
             gsap.to(".hero-second-title", {
               scrollTrigger: {
                 trigger: ".hero-sub",
-                scrub: 1,
+                scrub: true,
                 start: "bottom bottom",
               },
               duration: 2,
-              ease: "none",
               keyframes: [
-                { opacity: 1, scale: 1.130 },
-                { opacity: 0,scale: 1.130 }
-              ]
+                { opacity: 1, scale: 1.13 },
+                { opacity: 0, scale: 1.13 },
+              ],
             });
           }
-        }
+        },
       },
       scale: 1.2,
       opacity: 0,
@@ -48,24 +48,30 @@ function Hero() {
       duration: 2,
       ease: "none",
     });
-
-    
-
   }, []);
 
   return (
     <div
       id="hero"
-      className="h-[300vh] w-full flex flex-col items-center justify-center"
+      className="h-[300vh] w-full flex relative flex-col items-center justify-center"
     >
       <div className="h-screen hero-sub  fixed top-0 w-full flex flex-col items-center justify-center">
         <h1 className="text-3xl font-medium text-green hero-desc">All-new</h1>
         <div className="h-screen   fixed top-0 w-full flex flex-col items-center justify-center">
-        <h1 className="text-[6rem] opacity-0 hero-second-title font-bold -mt-6 ">
-          Rebuilt from the sound up.
-        </h1>
+          <video
+            src={DancingVideo}
+            loop
+            autoPlay
+            muted
+            className="h-screen min-w-screen scale-[1.05] z-10 opacity-0 dancing-video "
+          />
         </div>
-        
+        <div className="h-screen   fixed top-0 w-full flex flex-col items-center justify-center">
+          <h1 className="text-[6rem] opacity-0 hero-second-title font-bold -mt-6 ">
+            Rebuilt from the sound up.
+          </h1>
+        </div>
+
         <h1 className="text-[13rem] hero-title font-bold -mt-6 ">
           AirPods Pro
         </h1>
