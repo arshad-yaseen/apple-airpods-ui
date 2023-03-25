@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+    font-family: 'Sf-Pro-Display-Regular';
+    src: url('../public/fonts/SFPRODISPLAYREGULAR.OTF');
+}
+@font-face{
+    font-family: 'Sf-Pro-Display-Medium';
+    src: url('../public/fonts/SFPRODISPLAYMEDIUM.OTF');
+}
+@font-face{
+    font-family: 'Sf-Pro-Display-Bold';
+    src: url('../public/fonts/SFPRODISPLAYBOLD.OTF');
+}
+
+body{
+    font-family: 'Sf-Pro-Display-Regular';
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+}
+.font-bold{
+    font-family: 'Sf-Pro-Display-Bold';
+}
+.font-medium{
+    font-family: 'Sf-Pro-Display-Medium';
+}
+.font-regular{
+    font-family: 'Sf-Pro-Display-Regular';
+}
+.text-green{
+    color: #00FF41;
+}
+.bg-green{
+    background-color: #00FF41;
+}
