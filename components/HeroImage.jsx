@@ -55,6 +55,7 @@ function HeroImage() {
  window.onscroll = (e) => {
 
   let hero = document.getElementById('hero');
+  let dancingSection = document.getElementById('dancingSection');
 
  // get the current scroll position
  const currentScrollPosition = window.scrollY || window.pageYOffset;
@@ -195,7 +196,7 @@ function HeroImage() {
   }, []);
 
   return (
-    <Image priority={true} id='hero-airpords-image' src={frame} alt="airpods-frame-1" height={1000} className="transition-opacity duration-300" />
+    <Image priority={true} id='hero-airpords-image' src={frame} alt="airpods-frame-1" height={1000} className="transition-opacity duration-300 " />
   )
 }
 
