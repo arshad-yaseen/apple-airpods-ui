@@ -65,7 +65,7 @@ function DancingSection() {
       scrollTrigger: {
         trigger: "#dancingSection",
         scrub: true,
-        start: "top 98%",
+        start: "top 145%",
         end: "top -100%",
 
       },
@@ -79,8 +79,8 @@ function DancingSection() {
   },[])
 
   return (
-    <div id='dancingSection' className='w-full h-[200vh] z-50 relative p-56' >
-        <h1 className='text-white text-5xl font-bold w-[850px] leading-[1.2]' >
+    <div id='dancingSection' className='w-full h-[200vh] z-50  relative lg:p-56 p-6' >
+        <h1 className='text-white lg:text-[3.2rem] text-3xl font-bold lg:w-[850px] w-full leading-[1.2]' >
         <span className='opacity-100 dancing-title-1' >Up to 2x more Active Noise Cancellation than the previous generation.</span> <span className='opacity-10 dancing-title-2' >Spatial Audio takes immersion to a remarkably personal level.</span> <span className='opacity-10 dancing-title-3' >Touch control lets you adjust volume with a swipe.</span> <span className='opacity-10 dancing-title-4' >And a leap in power delivers 6 hours of battery life from a single charge.</span>
         </h1>
     </div>

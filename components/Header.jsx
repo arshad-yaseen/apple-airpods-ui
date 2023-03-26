@@ -15,16 +15,16 @@ function Header() {
   }, []);
 
   return (
-    <header className="w-full h-16 z-[100]   flex justify-center fixed top-0">
+    <header className="w-full lg:h-16 h-24 z-[100]   flex justify-center fixed top-0">
       <div
         id="header_sub"
-        className="w-[70%] h-full pt-2 flex items-center  border-b border-b-[#3D3D3D]"
+        className="lg:w-[70%] w-full px-4 h-full pt-2 flex items-center  border-b border-b-[#3D3D3D]"
       >
         <div className="w-1/2 h-full flex items-center justify-start">
-          <h4 className="text-xl">AirPods Pro (2nd generation)</h4>
+          <h4 className="text-xl">AirPods Pro <br className="lg:hidden" /> (2nd generation)</h4>
         </div>
         <div className="w-1/2 h-full flex items-center justify-end">
-          <ul className="flex text-[#D0D1D1]">
+          <ul className=" text-[#D0D1D1] lg:flex hidden">
             <li className="text-xs px-3 py-1 text-[#777676]">Overview</li>
             <li className="text-xs px-3 py-1 hover:text-[#0170E3] cursor-pointer ">
               Tech Specs

@@ -37,6 +37,8 @@ import Frame32 from "../public/airpodframes/heroairpod_36.png";
 
 function HeroImage() {
 
+
+  
     let [frame, setFrame] = useState(Frame1);
 
   useEffect(() => {
@@ -55,7 +57,7 @@ function HeroImage() {
  window.onscroll = (e) => {
 
   let hero = document.getElementById('hero');
-  let dancingSection = document.getElementById('dancingSection');
+
 
  // get the current scroll position
  const currentScrollPosition = window.scrollY || window.pageYOffset;
@@ -64,9 +66,12 @@ function HeroImage() {
  if (currentScrollPosition >= hero.scrollHeight - window.innerHeight) {
    // the scroll has ended
    document.querySelector('.dancing-video').classList.replace('opacity-0', 'opacity-100')
+
  }else{
     document.querySelector('.dancing-video').classList.replace('opacity-100', 'opacity-0')
  }
+
+
 
   let hero_airpords_image = document.getElementById('hero-airpords-image');
 
@@ -196,7 +201,7 @@ function HeroImage() {
   }, []);
 
   return (
-    <Image priority={true} id='hero-airpords-image' src={frame} alt="airpods-frame-1" height={1000} className="transition-opacity duration-300 " />
+    <Image loading='eager' priority={true} id='hero-airpords-image' src={frame} alt="airpods-frame-1" height={1000} className="transition-opacity duration-300 sm:h-auto h-[300px] sm:min-w-auto min-w-fit" />
   )
 }
 

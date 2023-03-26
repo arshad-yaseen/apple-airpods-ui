@@ -2,6 +2,12 @@ import Head from "next/head";
 import Hero from "../components/Hero";
 import Header from "../components/Header";
 import DancingSection from "../components/DancingSection";
+import AudioPerfomanceSection from "../components/AudioPerfomanceSection";
+import NoiceCancellationSection from "../components/NoiceCancellationSection";
+import NoiseOverviewSection from "../components/NoiseOverviewSection";
+import BentoSection from "../components/BentoSection";
+import XraySection from "../components/XraySection";
+import Footer from "../components/Footer";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -52,6 +58,12 @@ export default function Home() {
           <Header />
           <Hero />
           <DancingSection />
+          <AudioPerfomanceSection />
+          <BentoSection />
+          <XraySection />
+          <NoiceCancellationSection />
+          <NoiseOverviewSection />
+          <Footer />
 
       </main>
     </>
